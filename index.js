@@ -33,13 +33,13 @@ client.on("messageCreate", async message => {
 
         // If the connection isn't authenticated, it authenticates it with the await function.
         if (!characterAI.isAuthenticated()) { 
-            await characterAI.authenticateWithToken(botConfig.authToken);
+            await characterAI.authenticateWithToken(process.env.authtoken);
             // To authenticate as a guest use .authenticateAsGuest()
             // To authenticate as a user use .authenticateWithToken(botConfig.authToken)
         }
 
         // Create or Continue in the character.ai chat (Uses the ChatID set in botConfig.json)
-        const chat = await characterAI.createOrContinueChat(botConfig.characterID);
+        const chat = await characterAI.createOrContinueChat(process.env.characterid);
 
         // Send a message
         const response = await chat.sendAndAwaitResponse(`${msgText}`, true);
@@ -60,4 +60,4 @@ client.on("messageCreate", async message => {
 
 });
 
-client.login(botConfig.token) // connects the bot.
+client.login(process.env.Token) // connects the bot.
