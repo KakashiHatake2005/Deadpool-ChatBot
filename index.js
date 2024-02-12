@@ -8,7 +8,7 @@ const characterAI = new CharacterAI();
 // When the bot is "ready":
 client.once("ready", async () => {
     console.log(`${client.user.username} is online.`); // Log it in the console.
-    client.user.setPresence({ activities: [{ name: `Character.ai.`, type: ActivityType.Playing }], status: 'online' }) // Set a activity.
+    client.user.setPresence({ activities: [{ name: `With your MUM.`, type: ActivityType.Playing }], status: 'online' }) // Set a activity.
 });
 
 client.on("messageCreate", async message => {
