@@ -55,7 +55,7 @@ client.on("messageCreate", async message => {
 
     } catch (error) { // This runs if something goes wrong trying to send the reponse.
         console.log(error); // This logs it in the console.
-        await message.reply("There was a problem handling the command."); // This sends a msg in the discord channel.
+        await message.reply("I'll Ignore You MF"); // This sends a msg in the discord channel.
     }
 
 });
